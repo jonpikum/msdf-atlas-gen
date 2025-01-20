@@ -24,3 +24,14 @@ output.png
 CMakeUserPresets.json
 out/
 /cmake-gen.bat
+config.h
+
+# Use Makefile
+cmake/
+CMakePresets.json
+CMakeLists.txt
+msdf-atlas-gen.rc
+msdf-atlas-gen/artery-font-export.h
+msdf-atlas-gen/csv-export.h
+msdf-atlas-gen/json-export.h
+vcpkg.json
