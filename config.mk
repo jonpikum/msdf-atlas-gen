@@ -9,8 +9,10 @@ PKG_CONFIG = pkg-config
 USED_LIBS = \
 
 INCS = `$(PKG_CONFIG) --cflags $(USED_LIBS)`
+INCS =
 
 LIBS = -lm -lpthread `$(PKG_CONFIG) --libs $(USED_LIBS)`
+LIBS = -lm -lpthread
 
 # flags
 SHARED_FLAGS = -D_DEFAULT_SOURCE \
@@ -20,14 +22,11 @@ SHARED_FLAGS = -D_DEFAULT_SOURCE \
 	-pedantic \
 	-fPIC \
 
-#	-fPIC \
-#	-pthread \
-
 CFLAGS   += $(SHARED_FLAGS)
 CXXFLAGS += $(SHARED_FLAGS)
 CPPFLAGS = $(SHARED_FLAGS)
 LDFLAGS  = $(LIBS)
 
 # compiler & linker
-CC  = /usr/bin/gcc
-CXX = /usr/bin/g++
+CC  ?= /usr/bin/gcc
+CXX ?= /usr/bin/g++
