@@ -18,6 +18,7 @@ SHARED_FLAGS = -D_DEFAULT_SOURCE \
 	-Wall \
 	-Wextra \
 	-pedantic \
+	-fPIC \
 
 #	-fPIC \
 #	-pthread \
